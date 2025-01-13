@@ -164,12 +164,12 @@ app.post('/auth', (req, res) => {
 
 // //중복확인
 // app.get('/users/check-id', (req, res)=>{
-//   const {user_id}=req.query;
+  //   const {user_id}=req.query;
 
 //   if(!user_id){
 //     return res.status(400).send({success:false, message:'아이디를 입력해주세요'})
 //   }
-  //데이터베이스에서 아이디 검색
+//   //데이터베이스에서 아이디 검색
   models.User.findOne({
     where: {user_id},
   }).then((user)=>{
@@ -182,7 +182,7 @@ app.post('/auth', (req, res) => {
     console.error(error);
     res.send({success:false, message:'서버 오류가 발생했습니다.'})
   })
-})
+      
 
 //댓글생성
 app.post('/comments', (req, res) => {
