@@ -19,7 +19,6 @@ const upload = multer({
   }),
 });
 const port=8080;
-
 app.use(express.json());//json형식의 데이터 처리할수 있도록 설정하는 코드
 app.use(cors({
   origin: ['http://localhost:3000', 'https://index-two-lake.vercel.app'], //허용하는 출처 목록
